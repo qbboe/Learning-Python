@@ -12,18 +12,18 @@ print("%s %s" % ('I like the quote', quote))
 print("I don't like ", end="")   # avoid \n
 print("newlines \n\n")
 
-alphabeta = "abcdefghi"
-print(alphabeta[0:4])
-print(alphabeta[-5:])
-print(alphabeta[:-5])
+alphabeta = "abcdefghi"	# String
+print(alphabeta[0:4])		# abcd
+print(alphabeta[-5:])		# efghi
+print(alphabeta[:-5])		# abcd
 print(alphabeta[:4]+"nice!")
 print("%c is %s initial, number %d, %.2f tackles/game"  
 % ('V','Vontaze',55,5.55))
 print(alphabeta.capitalize)
 print(alphabeta.find("e"))
-print(alphabeta.isalpha())
-print(alphabeta.replece ("a","A"))
-print(alphabeta.strip())
+print(alphabeta.isalpha(), , "   .isaplha")
+#print(alphabeta.replece ("abcdefghi","jklmnop"))
+print(alphabeta.strip(), "   .strip")
 quote = alphabeta.split()
 
 # LISTS

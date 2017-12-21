@@ -1,8 +1,6 @@
-import random       # modules
 import sys
-import os
 
-def addNumber(sNum,lNum) :# last and second last number
+def addNumber(sNum, lNum):# last and second last number
 	sumNum = sNum + lNum
 	return sumNum
 
@@ -15,7 +13,7 @@ lNum = fibo_list[dim-1]
 sNum = fibo_list[dim-2]
 
 # Compute Fibonacci's sequence 
-while (dim < list_lenght) :
+while (dim < list_lenght):
 	dim = len(fibo_list)
 	lNum = fibo_list[dim-1]
 	sNum = fibo_list[dim-2]
@@ -29,9 +27,9 @@ poles = 5	# number of nodes desired
 delta = 0
 matrix = []
 
-def cumpute_delta (a,n) :
+def cumpute_delta (a,n):
 	delta = 0
-	for i in range (0,poles) :   	# compute delta
+	for i in range (0,poles):   	# compute delta
 		r = a*int(x_list[i])**n
 		#y_list.append(r)
 		delta +=  (r - y_fibo[i])**2
@@ -42,15 +40,15 @@ def cumpute_delta (a,n) :
 	return delta
 	
 # Compute reference	
-for i in range(0,poles) :
+for i in range(0,poles):
 	x_list.append(list_lenght/(2*poles)+i*list_lenght/poles)
 	y_fibo.append(fibo_list[int(x_list[i])])
 print('x_list',x_list)		# interpolation nodes
 print('y_fibo',y_fibo)		# fibonacci'values for nodes 
 
 
-for a in range (0,3) :
-	for n in range (0,3) :
+for a in range (0,3):
+	for n in range (0,3):
 		matrix = [ a,n,cumpute_delta (a,n)]
 		y_list.append(delta)		
 		print('matrix',matrix)

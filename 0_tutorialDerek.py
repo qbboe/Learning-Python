@@ -67,7 +67,7 @@ print('\n' * 5)
 # Each value has an index with the first one starting at 0
  
 grocery_list = ['Juice', 'Tomatoes', 'Potatoes', 'Bananas']
-print('The first item is', grocery_list[1])
+print('The second item is', grocery_list[1])
  
 # You can change the value stored in a list box
 grocery_list[0] = "Green Juice"
@@ -84,10 +84,10 @@ to_do_list = [other_events, grocery_list]
 print(to_do_list)
  
 # Get the second item in the second list (Boxes inside of boxes)
-print(to_do_list[1][1])
+print(to_do_list[1][1], "    #to_do_list[1][1]\n")
  
 # You add values using append
-grocery_list.append('onions')
+grocery_list.append('Onions')
 print(to_do_list)
  
 # Insert item at given index
@@ -108,7 +108,7 @@ print(to_do_list)
  
 # We can combine lists with a +
 to_do_list = other_events + grocery_list
-print(to_do_list)
+print(to_do_list,'    # +')
  
 # Get length of list
 print(len(to_do_list))
@@ -117,7 +117,7 @@ print(len(to_do_list))
 print(max(to_do_list))
  
 # Get the minimum item in list
-print(min(to_do_list))
+print(min(to_do_list),'\n')
  
 # TUPLES -------------
 # Values in a tuple can't change like lists
@@ -158,7 +158,7 @@ print(len(super_villains))
 print(super_villains.get("Pied Piper"))
  
 # Get a list of dictionary keys
-print(super_villains.keys())
+print(super_villains.keys()) 
  
 # Get a list of dictionary values
 print(super_villains.values())
@@ -239,7 +239,8 @@ random_num = random.randrange(0,100)
 while (random_num != 15):
     print(random_num)
     random_num = random.randrange(0,100)
- 
+print("END WHILE!\n")
+
 # An iterator for a while loop is defined before the loop
 i = 0;
 while (i <= 20):
@@ -364,7 +365,7 @@ print(text_in_file)
 # Every object has attributes (color, height, weight) which are object variables
 # Every object has abilities (walk, talk, eat) which are object functions
  
-class Animal:
+class Animal:	# "cat" and "dog" are elements of class "Animal"
     # None signifies the lack of a value
     # You can make a variable private by starting it with __
     __name = None
@@ -386,8 +387,8 @@ class Animal:
     def set_height(self, height):
         self.__height = height
  
-    def set_weight(self, height):
-        self.__height = height
+    def set_weight(self, weight):
+        self.__weight = weight
  
     def set_sound(self, sound):
         self.__sound = sound
